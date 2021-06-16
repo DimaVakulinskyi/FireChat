@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DvE-H5-K4m">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chats-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ConversationsViewController" customModule="FireChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chats" id="mgo-kA-Wpe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="829"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="4hL-ep-AFY">
+            <objects>
+                <viewController id="R3H-cH-t8Y" customClass="ProfileViewController" customModule="FireChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hPO-JB-gaQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AH1-i4-S5e">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5tf-D2-tvj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AH1-i4-S5e" firstAttribute="top" secondItem="5tf-D2-tvj" secondAttribute="top" id="1Vr-GV-Fug"/>
+                            <constraint firstItem="5tf-D2-tvj" firstAttribute="bottom" secondItem="AH1-i4-S5e" secondAttribute="bottom" id="67I-DU-Ho1"/>
+                            <constraint firstItem="AH1-i4-S5e" firstAttribute="top" secondItem="5tf-D2-tvj" secondAttribute="top" id="QQT-Ro-MrC"/>
+                            <constraint firstItem="5tf-D2-tvj" firstAttribute="trailing" secondItem="AH1-i4-S5e" secondAttribute="trailing" id="YC7-I2-hcK"/>
+                            <constraint firstItem="AH1-i4-S5e" firstAttribute="leading" secondItem="5tf-D2-tvj" secondAttribute="leading" id="iNH-5o-hWW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="fPe-pS-upP"/>
+                    <connections>
+                        <outlet property="tableView" destination="AH1-i4-S5e" id="9Ae-U1-TkB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpb-tf-E84" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="828"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yUx-kG-Xc3">
+            <objects>
+                <tabBarController id="DvE-H5-K4m" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GQE-RB-6LT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Dru-3D-Bah" kind="relationship" relationship="viewControllers" id="m7U-BF-8Zb"/>
+                        <segue destination="eTO-af-E3x" kind="relationship" relationship="viewControllers" id="d2X-sW-Beg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHp-1P-HFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="-645"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="61X-Du-0iG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dru-3D-Bah" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chats" id="cV8-h4-5kq">
+                        <imageReference key="image" image="bubble.left.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="re2-PT-Vn6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nvU-xO-40G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5nN-fn-uFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Fcx-eg-y8a">
+            <objects>
+                <navigationController id="eTO-af-E3x" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="hJo-0Q-q7a">
+                        <imageReference key="image" image="person.3.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Dnn-XI-N34">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="R3H-cH-t8Y" kind="relationship" relationship="rootViewController" id="WPF-co-41P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NA7-q2-Zw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
